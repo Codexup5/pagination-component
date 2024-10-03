@@ -1,0 +1,65 @@
+// Table.module.scss
+
+.wrapper {
+    overflow: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+
+    th,
+    td {
+        padding: 12px 16px;
+        text-align: left;
+        border-bottom: 1px solid #e0e0e0;
+    }
+}
+
+.tableHead {
+    background-color: #f5f5f5;
+
+    th {
+        font-weight: 600;
+        color: #424242;
+    }
+}
+
+.tableHeadCell {
+    &:first-child {
+        border-top-left-radius: 8px;
+    }
+
+    &:last-child {
+        border-top-right-radius: 8px;
+    }
+}
+
+.tableBody {
+    tr {
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: #fafafa;
+        }
+
+        &:last-child td {
+            border-bottom: none;
+        }
+    }
+
+    td {
+        color: #616161;
+
+        &:first-child {
+            border-left: 1px solid #e0e0e0;
+        }
+
+        &:last-child {
+            border-right: 1px solid #e0e0e0;
+        }
+    }
+}
